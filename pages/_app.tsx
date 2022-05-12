@@ -60,12 +60,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // Why Redux Toolkit?
 // Redux is great, but it does have a few shortcomings
 // 1 Configuring redux in an app seems complicated
-// 2 In addition to redux, a lot of other packages have to be installed to get redux to do something useful 
+// 2 In addition to redux, a lot of other packages have to be installed to get redux to do something useful
 // 3 Redux requies to much boilerplate code
 // Redux toolkit serves as an abstraction over redux. It hidex the difficult parts ensuring you have good developer exp.
 
-// Redux Toolkit featuring React 
-// Redux or Redux toolkit don't need a UI library to work 
+// Redux Toolkit featuring React
+// Redux or Redux toolkit don't need a UI library to work
 // RTK + REACT
 
 // React-redux
@@ -76,21 +76,21 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // Summary
 // React is a library to build user interfaces
 // Redux is a library for managing state is a predictable way in JavaScript applications
-// Reudx toolkit is a library for efficient redux development 
+// Reudx toolkit is a library for efficient redux development
 // React-redux is a library that provides bindings to use React and Redux (Toolkit)
 // together in a application
 
 // Few points before we proceed
 // "When should I use redux in my react application"
 // You have large amounts of application state that are needed in many places in the app
-// The app state is updated frequently over time 
+// The app state is updated frequently over time
 // The logic to update that state may be complex
 // The app has a medium or large-sized codebase, and might be worked on by many people
 // Redux has a learning curve
 // Course structure
 // Learn redux first
 // Learn redux toolkit second
-// Leran React Redux third 
+// Leran React Redux third
 
 // Redux Toolkit Tutorial - 3 - Three Core Concepts
 
@@ -98,12 +98,59 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // Entities
 // Ship - stories cakes on a shelf
 // Sholkeeper - Behind the counter
-// Customer - at the store entrance 
+// Customer - at the store entrance
 
-// Activities 
+// Activities
 // Customer - order a cake
 // Shopkeeper - Box a cake from the shelf - Receipt to keep track
 
 // A store that holds the state of you application
 // An action that describes what happened in the application
 // A reducer which handles the action and decides how to update the state
+
+// Redux Toolkit Tutorial - 4 - Three Principles
+
+// First principle
+// The global state of your application is stored as an object inside a single store
+// Maintain our application state in a single object which would be managed by the Redux store
+
+// Cake Shop -
+// Let's assume we are tracking the number of cakes on the shelf
+// {
+//   numberOfCakes: 10
+// }
+
+// Second principle
+// The only way to change the state is to dispatch an action, an object that describes what happened
+// To update the state of your app, you need to let Redux know about that with an action
+// Not allowed to directly update the state object
+
+// Cake shop
+// Scan the QR code and place an order - CAKE_ORDERED
+// {
+//   type: `CAKE_ORDERED`;
+// }
+
+// Third principle
+// "To specify how the state tree is updated based on actions, you write pure reducers"
+// Reducer - (previousState, action) => newState
+// Cake Shop
+// Reducer is the shopkeeper
+
+// const initialState = {
+//   numberOfCakes: 10,
+//   CAKE_ORDERED: `CAKE_ORDERED`,
+// };
+
+// export const reducer = (state = initialState, action: { type: number }) => {
+//   switch (action.type) {
+//     case CAKE_ORDERED:
+//       return {
+//         numberOfCakes: state.numberOfCakes - 1,
+//       };
+//     default:
+//       return state;
+//   }
+// };
+
+// Redux Store(state) => JavaScript App => Action => Reducer => Redux Store(state)
