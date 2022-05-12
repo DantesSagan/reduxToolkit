@@ -91,3 +91,19 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // Learn redux first
 // Learn redux toolkit second
 // Leran React Redux third 
+
+// Redux Toolkit Tutorial - 3 - Three Core Concepts
+
+// Cake shop
+// Entities
+// Ship - stories cakes on a shelf
+// Sholkeeper - Behind the counter
+// Customer - at the store entrance 
+
+// Activities 
+// Customer - order a cake
+// Shopkeeper - Box a cake from the shelf - Receipt to keep track
+
+// A store that holds the state of you application
+// An action that describes what happened in the application
+// A reducer which handles the action and decides how to update the state
