@@ -103,7 +103,7 @@ export default function NavbarIndexTop({ checked, setChecked }) {
             <Visibility />
           </IconButton>
           <Typography variant='h3' component='div' sx={{ flexGrow: 1 }}>
-            Next&&MaterialUI
+            Redux Toolkit&&MaterialUI
           </Typography>
           <Button
             variant='contained'
@@ -143,7 +143,7 @@ export default function NavbarIndexTop({ checked, setChecked }) {
               aria-expanded={open ? 'true' : undefined}
               endIcon={<KeyboardArrowDown />}
             >
-              Interactive section
+             Redux Toolkit
             </Button>
 
             <Button
@@ -224,7 +224,7 @@ export default function NavbarIndexTop({ checked, setChecked }) {
             }}
           >
             <MenuItem onClick={handleClose}>
-              <Link href='/typography'>Link to typography</Link>
+              <Link href='/actions'>Link to Actions</Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <Link href='/muibuttons'>Link to button</Link>
