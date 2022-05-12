@@ -168,3 +168,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // Specify how the app's state changes in resposne to actions sent to the store
 // Function that acceprts state and action as arguments, and returns the next state of the appliction
 // (prevState, action) => newState
+
+// Redux Toolkit Tutorial - 7 - Store
+// Redux store
+// One store for the entire application
+// Responsibilities -
+// Holds application state
+// Allows acces to state via getState()
+// Allows state to be updated via dispatch(action)
+// Registers listeners via subscribe(listener)
+// Handles unregistering of listeners via the function returned by subcribed(listener)
