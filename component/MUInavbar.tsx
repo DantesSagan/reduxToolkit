@@ -17,6 +17,7 @@ import { Visibility } from '@mui/icons-material';
 import { CatchingPokemon, KeyboardArrowDown } from '@mui/icons-material';
 import React, { useState } from 'react';
 
+
 export default function NavbarIndexTop({ checked, setChecked }) {
   const [hide, setHide] = useState(true);
 
