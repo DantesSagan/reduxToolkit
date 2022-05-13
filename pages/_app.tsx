@@ -200,3 +200,44 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 //  Provides a third-party extenstion point between dispatching an action, and the moment
 // it reaches the reducer
 // Use middleware for logging, crash reporting, performing asynchonous tasks etc
+
+// Redux Toolkit Tutorial - 15 - Async Actions
+// Actions
+// Synchronous Actions
+// As soon as an action was dispatched, the satte was immediately updated.
+// If you dispatch the CAKE_ORDERED action, the numOfCakes was right away decremented by 1.
+// Same with ICECREAM_ORDERED action as well.
+
+// Async actions
+// Asynchronous API calls to fetch data from an end point and use that data un your application.
+
+// Our Application
+// Fetches a list of users from an API end point and stores it in the redux store.
+// State?
+// Actions?
+// Reducer?
+
+// State
+// state = {
+//   loading: true,
+//   data: [],
+//   error: ``,
+// }
+// loading - Display a loading spinner in your application
+// data - List of users
+// error - Display error to the user
+
+// Actions
+// FETCH_USERS_REQUESTED - fetch list of users
+// FETCH_USERS_SUCCEEDED - fetched successfully
+// FETCH_USERS_FAILED - Error when fetching the data
+
+// Reducers
+// case: FETCH_USERS_REQUESTED
+// loading: true
+// case: FETCH_USERS_SUCCEEDED
+// loading: false
+// users: data(from API)
+// case: FETCH_USERS_FAILED
+// loading: false
+// error: error(from API)
