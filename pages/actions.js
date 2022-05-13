@@ -1,9 +1,12 @@
 const redux = require('redux');
 const createStore = redux.createStore;
 const bindActionCreators = redux.bindActionCreators;
+const combineReducers = redux.combineReducers;
 
 const CAKE_ORDERED = 'CAKE_ORDERED';
 const CAKE_RESTOCKED = 'CAKE_RESTOCKED';
+const ICECREAM_ORDERED = 'ICECREAM_ORERED';
+const ICECREAM_RESTOCKED = 'ICECREAM_RESTOCKED';
 
 function orderCake() {
   return {
@@ -21,12 +24,36 @@ function restockCake(qty = 1) {
   };
 }
 
-const reducerInitialState = {
+// ordering icecreams
+function orderIceCream(qty = 1) {
+  return {
+    type: ICECREAM_ORDERED,
+    payload: qty,
+  };
+}
+
+// restocking icecreams
+function restockIceCream(qty = 1) {
+  return {
+    type: ICECREAM_RESTOCKED,
+    payload: qty,
+  };
+}
+
+// const reducerInitialState = {
+//   numOfCakes: 10,
+//   numOfIceCreams: 20,
+// };
+
+const initialCakeState = {
   numOfCakes: 10,
-  anotherProperty: 0,
 };
 
-const reducer = (state = reducerInitialState, action) => {
+const initialIceCreamState = {
+  numOfIceCreams: 20,
+};
+
+const cakeReducer = (state = initialCakeState, action) => {
   switch (action.type) {
     case CAKE_ORDERED:
       return {
@@ -42,7 +69,31 @@ const reducer = (state = reducerInitialState, action) => {
       return state;
   }
 };
-const store = createStore(reducer);
+
+const iceCreamReducer = (state = initialIceCreamState, action) => {
+  switch (action.type) {
+    case ICECREAM_ORDERED:
+      return {
+        ...state,
+        numOfIceCreams: state.numOfIceCreams - 1,
+      };
+    case ICECREAM_RESTOCKED:
+      return {
+        ...state,
+        numOfIceCreams: state.numOfIceCreams + action.payload,
+      };
+
+    default:
+      return state;
+  }
+};
+
+const rootReducer = combineReducers({
+  cake: cakeReducer,
+  iceCream: iceCreamReducer,
+});
+
+const store = createStore(rootReducer);
 console.log('Initial state', store.getState());
 
 const unsubscribe = store.subscribe(() =>
@@ -54,7 +105,7 @@ const unsubscribe = store.subscribe(() =>
 // store.dispatch(orderCake());
 // store.dispatch(restockCake(3));
 
-// bindActionsCreators  
+// bindActionsCreators
 // turn an object whos values actions creators into an object with the same keys
 // but with every actions creator wrapped into dispatch call whey they will be involved directly
 // bindActionsCreators not really necessary
@@ -63,6 +114,8 @@ const actions = bindActionCreators(
   {
     orderCake,
     restockCake,
+    orderIceCream,
+    restockIceCream,
   },
   store.dispatch
 );
@@ -70,6 +123,9 @@ actions.orderCake();
 actions.orderCake();
 actions.orderCake();
 actions.restockCake(3);
+actions.orderIceCream();
+actions.orderIceCream();
+actions.restockIceCream(2);
 
 unsubscribe();
 
