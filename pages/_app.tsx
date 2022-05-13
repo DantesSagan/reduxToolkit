@@ -178,3 +178,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // Allows state to be updated via dispatch(action)
 // Registers listeners via subscribe(listener)
 // Handles unregistering of listeners via the function returned by subcribed(listener)
+
+// Redux Toolkit Tutorial - 8 - Restocking Cakes
+// Everyday, a vendor comes to the shop to restock the shelves.
+// The vendor can stock up one more number of cakes depending on the previous day sales.
