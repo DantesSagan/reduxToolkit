@@ -187,10 +187,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // Cakes & Ice creams!
 // Cake shop
 // Cakes stored on the shelf
-// Shopkeeper to handle CAKE_ORDERED from customer 
+// Shopkeeper to handle CAKE_ORDERED from customer
 // Sell ice creames!
 // Ice Creames stored in the freezer
 // New shopkeeper to handle ICECREAM_ORDERED from customer
 // State ot the shop is now number of cakse on the shels along with the number of ice creams in the freezer
 // Separate shopkeepers help with scalability
 // Separate shopkeepers help narrow down on a problem when one does arise
+
+// Redux Toolkit Tutorial - 14 - Middleware
+// Is the suggested way to extend Redux with custom functionality
+//  Provides a third-party extenstion point between dispatching an action, and the moment
+// it reaches the reducer
+// Use middleware for logging, crash reporting, performing asynchonous tasks etc
