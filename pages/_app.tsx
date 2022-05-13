@@ -241,3 +241,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // case: FETCH_USERS_FAILED
 // loading: false
 // error: error(from API)
+
+// Redux Toolkit Tutorial - 16 - Redux Thunk Middleware
+// Async action creators 
+// axios - Requests to an API end point
+// redux-thunk - define async action creators 
+// middleware
