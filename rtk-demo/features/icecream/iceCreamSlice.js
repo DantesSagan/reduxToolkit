@@ -31,6 +31,9 @@ const iceCreamSlice = createSlice({
     builder.addCase(orderedCake, (state) => {
       state.numOfIceCreams--;
     });
+    builder.addCase(restockedCake, (state) => {
+      state.numOfIceCreams;
+    });
   },
 });
 export const iceCreamReducer = iceCreamSlice.reducer;
