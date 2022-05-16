@@ -247,3 +247,21 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 // axios - Requests to an API end point
 // redux-thunk - define async action creators 
 // middleware
+
+// Redux Toolkit Tutorial - 17 - Redux Toolkit Intro
+// Redux concerns 
+// Redux requires to much boilerplate code
+// 1. Action
+// 2. Action object
+// 3. Action creator
+// 4. Switch statement in a reducer
+// A lot of other packages have to be installed to work with redux
+// 1. Redux-thunk
+// 2. Immer
+// 3. Redux-devtools
+// There was a need to improve the developer experience for redux
+
+// Redux Toolkit 
+// 1. Abstract over the setup process
+// 2. Handle the most common use cases
+// 3. Include some useful utilities
