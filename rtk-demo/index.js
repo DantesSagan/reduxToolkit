@@ -12,9 +12,7 @@ const { bindActionCreators } = pkg;
 
 console.log('Initial state', store.getState());
 
-const unsubscribe = store.subscribe(() => {
-  console.log('Update state', store.getState());
-});
+const unsubscribe = store.subscribe(() => {});
 
 const actions = bindActionCreators(
   {
