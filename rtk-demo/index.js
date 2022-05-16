@@ -12,7 +12,13 @@ const { bindActionCreators } = pkg;
 
 console.log('Initial state', store.getState());
 
-const unsubscribe = store.subscribe(() => {});
+// without logger
+const unsubscribe = store.subscribe(() => {
+  console.log('Update state', store.getState());
+});
+
+// with logger
+// const unsubscribe = store.subscribe(() => {});
 
 const actions = bindActionCreators(
   {
