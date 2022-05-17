@@ -3,6 +3,7 @@ import {
   orderedIceCream,
   restockedIceCream,
 } from './features/icecream/iceCreamSlice.js';
+import { fetchUsers } from './features/user/userSlice.js';
 
 import { store } from './app/store.js';
 
@@ -10,6 +11,7 @@ import pkg from '@reduxjs/toolkit';
 
 const { bindActionCreators } = pkg;
 
+// START INITIAL STATE
 console.log('Initial state', store.getState());
 
 // without logger
@@ -34,36 +36,50 @@ const actions = bindActionCreators(
   store.dispatch
 );
 
-actions.orderedCake();
-actions.orderedCake();
-actions.orderedCake();
-actions.orderedCake();
+store.dispatch(fetchUsers());
 
-const initStateCakeAfter = store.getState().cake.numOfCakes;
-if (initStateCake > initStateCakeAfter) {
-  const diffCake = initStateCake - initStateCakeAfter;
-  actions.restockedCake(diffCake);
-}
+// // actions to ordered some cakes
+// actions.orderedCake();
+// actions.orderedCake();
+// actions.orderedCake();
+// actions.orderedCake();
 
-actions.orderedIceCream();
-actions.orderedIceCream();
-actions.orderedIceCream();
-actions.orderedIceCream();
+// // get state (number) after ordered some cake's
+// // and calc diff of cake's that doesn't have
+// // in another word just take diff state to restocked Cake's
+// const initStateCakeAfter = store.getState().cake.numOfCakes;
+// if (initStateCake > initStateCakeAfter) {
+//   const diffCake = initStateCake - initStateCakeAfter;
+//   actions.restockedCake(diffCake);
+// }
 
-const initStateTwoIceCream = store.getState().iceCream.numOfIceCreams;
-if (initStateIceCream > initStateTwoIceCream) {
-  const diffIceCream = initStateIceCream - initStateTwoIceCream;
-  actions.restockedIceCream(diffIceCream);
-}
+// // actions to ordered some icecream's
+// actions.orderedIceCream();
+// actions.orderedIceCream();
+// actions.orderedIceCream();
+// actions.orderedIceCream();
 
-unsubscribe();
-//
-const array = [];
+// // get state (number) after ordered some icecream's
+// // and calc diff of cake's that doesn't have
+// // in another word just take diff state to restocked iceream's
+// const initStateTwoIceCream = store.getState().iceCream.numOfIceCreams;
+// if (initStateIceCream > initStateTwoIceCream) {
+//   const diffIceCream = initStateIceCream - initStateTwoIceCream;
+//   actions.restockedIceCream(diffIceCream);
+// }
 
-array.push(store.getState());
+// unsubscribe();
+// //
+// const array = [];
 
-const lastElementInArray = array[array.length - 1];
-console.log('Final state', lastElementInArray);
+// array.push(store.getState());
+
+// const lastElementInArray = array[array.length - 1];
+// console.log('Final state', lastElementInArray);
+
+
+
+// for using separately without bindActionCreators
 // store.dispatch(cakeActions.ordered());
 // store.dispatch(cakeActions.ordered());
 // store.dispatch(cakeActions.ordered());
