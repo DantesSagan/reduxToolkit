@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import CakeView from './features/cake/CakeView';
 import UserView from './features/user/UserView';
-import IceCreamView from './features/icecream/icecreamView';
+import IceCreamView from './features/icecream/IceCreamView';
 
 import './App.css';
 

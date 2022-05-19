@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const iceCreamSlice = createSlice({
-  name: 'icecream',
+  name: 'iceCream',
   initialState,
   reducers: {
     orderedIceCream(state) {
@@ -35,5 +35,6 @@ const iceCreamSlice = createSlice({
     });
   },
 });
+
 export default iceCreamSlice.reducer;
 export const { orderedIceCream, restockedIceCream } = iceCreamSlice.actions;
