@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 
 import { orderedCake, restockedCake } from '../cake/cakeSlice';
 export default function CakeView() {
   const [value, setValue] = useState(0);
 
-  const initNumOfCakes = useSelector(
-    (state) => state.cake.numOfCakes
-  );
+  const initNumOfCakes = useSelector((state) => state.cake.numOfCakes);
   const [first, setfirst] = useState(initNumOfCakes);
   console.log(first);
 
@@ -20,6 +18,10 @@ export default function CakeView() {
     console.log('update', store.getState().cake.numOfCakes)
   );
   console.log(store);
+
+  // const changeOrdered = useCallback(() => {
+  //   dispatch({ type: 'cake/orderedCake' });
+  // }, []);
 
   return (
     <section className='border-2 border-white rounded-lg p-4'>
