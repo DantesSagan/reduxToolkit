@@ -26,14 +26,14 @@ const iceCreamSlice = createSlice({
   // },
   // that allows create slice to reponse to other actions types
   // besides the types it has generated
-  extraReducers: (builder) => {
-    builder.addCase(orderedCake, (state) => {
-      state.numOfIceCreams--;
-    });
-    builder.addCase(restockedCake, (state) => {
-      state.numOfIceCreams;
-    });
-  },
+  // extraReducers: (builder) => {
+  //   builder.addCase(orderedCake, (state) => {
+  //     state.numOfIceCreams--;
+  //   });
+  //   builder.addCase(restockedCake, (state) => {
+  //     state.numOfIceCreams;
+  //   });
+  // },
 });
 
 export default iceCreamSlice.reducer;
