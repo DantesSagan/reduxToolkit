@@ -1,0 +1,51 @@
+{
+  "cakes": [
+    {
+      "id": 1,
+      "idCheck": 1,
+      "price": 100,
+      "description": "bla-bla-bla 1",
+      "flavour": "salty",
+      "color": "red",
+      "numOfCakes": 10,
+      "img": "/public/photos/cake2.jpg"
+    },
+    {
+      "id": 2,
+      "idCheck": 2,
+      "price": 200,
+      "description": "bla-bla-bla 2",
+      "flavour": "sweety",
+      "color": "white",
+      "numOfCakes": 20,
+      "img": "/public/photos/cake3.jpg"
+    },
+    {
+      "id": 3,
+      "idCheck": 3,
+      "price": 300,
+      "description": "bla-bla-bla 3",
+      "flavour": "salty",
+      "color": "yellow",
+      "numOfCakes": 30,
+      "img": "/public/photos/cake4.jpg"
+    },
+    {
+      "id": 4,
+      "idCheck": 4,
+      "price": 400,
+      "description": "bla-bla-bla 4",
+      "flavour": "sweett",
+      "color": "black",
+      "numOfCakes": 40,
+      "img": "/public/photos/cake1.jpg"
+    }
+  ],
+  "basket": [
+    {
+      "id": 1,
+      "numOfOrdered": 0,
+      "basketAllPrice": 0
+    }
+  ]
+}

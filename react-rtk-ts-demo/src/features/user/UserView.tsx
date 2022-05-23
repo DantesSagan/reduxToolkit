@@ -27,7 +27,7 @@ export default function UserView() {
   });
 
   return (
-    <section className='border-2 border-white rounded-lg p-4 mt-2'>
+    <section className='border-2 border-black rounded-lg p-4 mt-2'>
       <hr className='p-2 mt-2' />
       {user.loading && <div>Loading..</div>}
       {user.error && (
@@ -41,7 +41,7 @@ export default function UserView() {
                 setLock(false);
                 dispatch(fetchUsers());
               }}
-              className='mr-1 p-4 bg-green-700 rounded-lg border-2 border-white hover:bg-green-600'
+              className='mr-1 p-4 bg-green-700 rounded-lg border-2 border-black hover:bg-green-600'
             >
               Fetch users
             </button>
@@ -51,7 +51,7 @@ export default function UserView() {
               <hr className='p-2 mt-2' />
               <button
                 onClick={() => setLock(true)}
-                className='mr-1 p-4 bg-red-700 rounded-lg border-2 border-white hover:bg-red-600'
+                className='mr-1 p-4 bg-red-700 rounded-lg border-2 border-black hover:bg-red-600'
               >
                 Cancel
               </button>
