@@ -3,6 +3,7 @@ import axios from 'axios';
 
 type Cakes = {
   id: number;
+  name: string;
   idCheck: number;
   price: number;
   description: string;

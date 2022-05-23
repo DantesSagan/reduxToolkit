@@ -2,6 +2,7 @@
   "cakes": [
     {
       "id": 1,
+      "name": "Green-red fantsy",
       "idCheck": 1,
       "price": 100,
       "description": "bla-bla-bla 1",
@@ -12,6 +13,7 @@
     },
     {
       "id": 2,
+      "name": "Delicious cream",
       "idCheck": 2,
       "price": 200,
       "description": "bla-bla-bla 2",
@@ -22,6 +24,7 @@
     },
     {
       "id": 3,
+      "name": "Solid breakfast",
       "idCheck": 3,
       "price": 300,
       "description": "bla-bla-bla 3",
@@ -32,10 +35,11 @@
     },
     {
       "id": 4,
+      "name": "Cream black-mamba",
       "idCheck": 4,
       "price": 400,
       "description": "bla-bla-bla 4",
-      "flavour": "sweett",
+      "flavour": "sweety",
       "color": "black",
       "numOfCakes": 40,
       "img": "/public/photos/cake1.jpg"
